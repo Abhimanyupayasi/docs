@@ -92,7 +92,7 @@
   },
   "logo": {
     "light": "/logo/piedapLogo.png",
-    "dark": "/logo/piedapForDark.png"
+    "dark": "/logo/PiedapForDark.png"
   },
   "navbar": {
     "links": [
