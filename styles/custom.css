@@ -1,0 +1,34 @@
+/* Custom styles to override Mintlify branding */
+
+/* Hide "Powered by Mintlify" footer text */
+[data-testid="footer"] a[href*="mintlify.com"],
+footer a[href*="mintlify.com"],
+.footer a[href*="mintlify.com"],
+a[href*="mintlify.com"]:contains("Powered by"),
+*:contains("Powered by Mintlify") {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Alternative approach - hide any footer link containing "Powered by" */
+footer a:contains("Powered by"),
+[role="contentinfo"] a:contains("Powered by"),
+.footer a:contains("Powered by") {
+  display: none !important;
+}
+
+/* Hide entire footer section with Mintlify branding if needed */
+footer div:has(a[href*="mintlify.com"]) {
+  display: none !important;
+}
+
+/* Replace with PIEDAP branding */
+footer::after,
+[role="contentinfo"]::after {
+  content: "© 2025 Powered by PIEDAP. All rights reserved.";
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}

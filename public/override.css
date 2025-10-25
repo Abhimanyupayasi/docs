@@ -1,0 +1,38 @@
+/* Custom CSS to override Mintlify branding */
+/* Note: This may not work due to Mintlify's restrictions */
+
+/* Hide any footer elements containing Mintlify branding */
+footer a[href*="mintlify"]:not([href*="docs.mintlify.com"]) {
+  display: none !important;
+}
+
+/* Hide specific footer branding text */
+footer [class*="powered"],
+footer [data-testid*="powered"],
+[role="contentinfo"] [class*="powered"] {
+  display: none !important;
+}
+
+/* Alternative: Hide the entire bottom section if it contains branding */
+footer > div:last-child:has(a[href*="mintlify"]) {
+  display: none !important;
+}
+
+/* Add custom PIEDAP footer styling */
+.piedap-footer {
+  text-align: center;
+ 
+  color: #6b7280;
+  font-size: 0.875rem;
+  border-top: 1px solid #e5e7eb;
+
+}
+
+.piedap-footer a {
+  color: #16A34A;
+  text-decoration: none;
+}
+
+.piedap-footer a:hover {
+  text-decoration: underline;
+}

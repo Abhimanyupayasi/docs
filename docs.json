@@ -17,6 +17,13 @@
             "group": "Getting started",
             "pages": [
               "index",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Web Testing",
+            "pages": [
+              "web-testing/keywords",
               "quickstart",
               "development"
             ]
@@ -84,8 +91,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/piedapLogo.png",
+    "dark": "/logo/piedapForDark.png"
   },
   "navbar": {
     "links": [
