@@ -23,9 +23,16 @@
           {
             "group": "Web Testing",
             "pages": [
-              "web-testing/keywords"
-              
-            
+              "web-testing/keywords",
+              "web-testing/page-objects",
+              "web-testing/writing-tests",
+              "web-testing/testing-types"
+            ]
+          },
+          {
+            "group": "Mobile Testing",
+            "pages": [
+              "mobile-testing/keywords"
             ]
           }
         ]
