@@ -1,0 +1,25 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Web Testing Basics",
+  "theme": "mint",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Basics",
+        "groups": [
+          {
+            "group": "Browser",
+            "pages": [
+              "web-testing/basics/xpath",
+              "web-testing/basics/locators"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/piedapLogo.png",
+    "dark": "/logo/PiedapForDark.png"
+  }
+}

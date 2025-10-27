@@ -1,0 +1,21 @@
+---
+title: "Locator: ID"
+description: "Use the unique id attribute to target elements"
+---
+
+# ID Locator
+
+The ID locator selects an element by its unique id attribute. Prefer ID when available because it’s fast and stable.
+
+```html
+<input id="email" type="email" />
+```
+
+Example usage
+
+- Target: id=email
+- Behavior: Selects the element whose id equals "email".
+
+<Tip>
+IDs should be unique per page. If multiple elements share the same id, fix the application markup to avoid flaky tests.
+</Tip>

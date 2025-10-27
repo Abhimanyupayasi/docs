@@ -1,0 +1,140 @@
+---
+title: "Test Data Management"  
+slug: /web-testing/test-data
+sidebar_position: 3
+mode : "wide"
+---
+import Accordion from '@site/src/components/Accordion';
+import AccordionGroup from '@site/src/components/AccordionGroup';
+import Tip from '@site/src/components/Tip';
+import Icon from '@site/src/components/Icon';
+
+
+Efficiently manage and utilize test data to enhance your automated testing processes. This section covers creating, organizing, and applying test data within your test cases.
+
+---
+
+### <Icon icon="log-in" size={20} /> Step 1: Log in to Piedap
+Visit [Piedap Platform](https://piedap.io) and sign in using your registered credentials to access the NexGen QE workspace.
+
+<img 
+  src="/web-testing/imgs/Login.png" 
+  alt="Login screen showing username and password fields" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="layout-dashboard" size={20} /> Step 2: Navigate to NexGen QE
+From the dashboard sidebar, open the **NexGen QE** module — the central hub for designing and managing test automation workflows.
+
+<img 
+  src="/web-testing/imgs/goToNex.png" 
+  alt="Dashboard view showing navigation menu with NexGen QE highlighted" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="beaker" size={20} /> Step 3: Open the Design Tab
+Go to the **Design** section, where you can view your projects, test suites, and related automation assets.
+
+<img 
+  src="/web-testing/imgs/designTab.png" 
+  alt="Design tab interface with project management tools" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="database" size={20} /> Step 4: Go to the Test Data Tab
+From the Design view, navigate to the **Test Data** tab — this is where you’ll create and manage reusable data sets for your test cases.
+
+<img 
+  src="/web-testing/imgs/testDataTab.png" 
+  alt="Test Data tab interface showing available datasets" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="plus-circle" size={20} /> Step 5: Create a New Test Data Table
+Click **Create New Test Data** and define the **table name**.  
+This represents a dataset that can be reused across multiple test cases.
+
+<img 
+  src="/web-testing/imgs/createTestData.png" 
+  alt="New test data creation dialog with name input" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="columns" size={20} /> Step 6: Add Columns to Your Test Data
+Add one or more columns to define the parameters for your test data, such as **Username**, **Password**, **URL**, or **Expected Output**.
+
+<img 
+  src="/web-testing/imgs/createTestData.png" 
+  alt="Test data column creation form" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="edit-3" size={20} /> Step 7: Enter Values in Each Column
+Fill in your test data values row by row.  
+Each row represents a unique set of inputs that can be used during test execution.
+
+<img 
+  src="/web-testing/imgs/enterValues.png" 
+  alt="Table with editable test data values" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+### <Icon icon="link" size={20} /> Step 8: Attach Test Data to a Test Case
+Once your table is created, go to your **Test Case** and attach the corresponding test data from the column section.
+
+<img 
+  src="/web-testing/imgs/attachtestdata.png" 
+  alt="Attaching test data to test case interface" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+<Tip>
+💡 You can reuse the same test data table across multiple test cases for consistent and efficient data-driven automation.
+</Tip>
+
+---
+
+### <Icon icon="check-circle" size={20} /> Step 9: Save and Validate
+Save your configuration. The attached test data will now automatically populate your test steps during execution.
+
+<img 
+  src="/web-testing/imgs/successfully.png" 
+  alt="Validation interface showing attached data in use" 
+  width="600" 
+  style={{borderRadius: '8px', margin: '15px 0'}}
+/>
+
+---
+
+## ✅ You’ve Learned
+You can now:
+- Create and structure reusable test data tables.  
+- Define columns and values for different automation needs.  
+- Attach test data directly to test cases for dynamic input.  
+
+<Tip>
+Next → Learn how to use your attached test data in live execution:  
+[Run Test Cases](/web-testing/writing-tests#step-10-run-the-test-case)
+</Tip>

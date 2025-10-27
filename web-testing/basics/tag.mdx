@@ -1,0 +1,21 @@
+---
+title: "Locator: Tag"
+description: "Select elements by their HTML tag name"
+---
+
+# Tag Locator
+
+The Tag locator selects elements by HTML tag, such as div, input, button, etc. It’s best combined with context to avoid broad matches.
+
+```html
+<button type="submit">Sign in</button>
+```
+
+Example usage
+
+- Target: tag=button
+- Behavior: Selects all <code>button</code> elements; refine with parent/attributes if needed.
+
+<Note>
+Tag alone can match many elements. Pair with filters (e.g., text or attributes) for precision.
+</Note>

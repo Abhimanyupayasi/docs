@@ -1,0 +1,277 @@
+---
+title: "XPath Locator"
+description: "Master XPath locators in NexGen QE — learn absolute vs relative XPath, dynamic element selection, and advanced techniques for robust test automation."
+mode: "wide"
+---
+
+# XPath Locator
+
+<Info>
+XPath provides powerful and flexible element location using XML path expressions, ideal for complex and dynamic element selection in web automation.
+</Info>
+
+## What is XPath?
+
+XPath (XML Path Language) is a query language used to navigate through elements and attributes in XML/HTML documents. It lets you locate nodes in the DOM using concise path-like expressions.
+
+Key characteristics:
+- Path syntax feels similar to file-system paths
+- Rich library of built‑in functions (text, position, string, math, and more)
+- Can traverse complex DOM structures (parents, children, siblings, ancestors)
+- A W3C standard used widely across tools and frameworks
+
+## Why use XPath in testing?
+
+XPath is especially helpful when:
+- Elements don’t have unique and stable IDs or names
+- You need to select elements based on relationships (ancestor/descendant/sibling)
+- Dealing with dynamic attributes or changing UI structures
+- Other simple locators (ID/Name/Text) aren’t sufficient
+- Advanced filtering and conditions are required
+
+## Types of XPath
+
+### Absolute XPath
+- Starts at the root of the document (e.g., `/html`)
+- Full path to the target element
+- Fragile — breaks easily with DOM structure changes
+
+```xpath
+/html/body/div[1]/section/div/div[2]/div/form/div[2]/input[3]
+```
+
+### Relative XPath
+- Starts anywhere using `//`
+- More flexible and resilient to DOM changes
+- Recommended for most test automation scenarios
+
+```xpath
+//input[@name='email']
+//div[@class='container']//button[text()='Submit']
+```
+
+## Dynamic XPath techniques
+
+1) Using `contains()`
+
+```xpath
+//input[contains(@id, 'username')]
+//button[contains(@class, 'btn-primary')]
+//div[contains(text(), 'Welcome')]
+```
+
+2) Using `starts-with()`
+
+```xpath
+//input[starts-with(@id, 'user_')]
+//div[starts-with(@class, 'header-')]
+//a[starts-with(@href, 'https://')]
+```
+
+3) Using `text()`
+
+```xpath
+//button[text()='Submit']
+//a[text()='Click Here']
+//h1[text()='Welcome to Our Site']
+```
+
+4) Using logical operators
+
+```xpath
+//input[@type='text' and @name='email']
+//button[@id='submit' or @class='confirm']
+//div[not(@class='hidden')]
+```
+
+5) Using position and index
+
+```xpath
+//input[1]                    
+//div[@class='item'][last()]
+//tr[position()=2]           
+//ul/li[position()>3]        
+```
+
+## XPath axes for advanced navigation
+
+Parent/child and descendant:
+
+```xpath
+//div/input           
+//form//input         
+```
+
+Siblings:
+
+```xpath
+//h1/following-sibling::p
+//label/preceding-sibling::input
+```
+
+Parents/ancestors:
+
+```xpath
+//input/../div
+//span/ancestor::div
+```
+
+## Practical examples in NexGen QE
+
+HTML structure example:
+
+```html
+<div class="login-form">
+	<input type="text" id="username_123" name="username" placeholder="Enter username">
+	<input type="password" id="password_456" name="password">
+	<button class="btn btn-primary submit-btn">Sign In</button>
+	<a href="/register" class="link">Create New Account</a>
+	<div class="error-message" style="display: none;">Invalid credentials</div>
+  
+</div>
+```
+
+Corresponding XPath examples:
+
+```xpath
+// Basic selection
+//input[@name='username']
+//button[text()='Sign In']
+
+// Dynamic ID handling
+//input[contains(@id, 'username')]
+//input[starts-with(@id, 'password')]
+
+// Class-based selection
+//button[contains(@class, 'btn-primary')]
+//a[contains(@class, 'link')]
+
+// Text content matching
+//a[text()='Create New Account']
+//div[contains(text(), 'Invalid')]
+
+// Complex conditions
+//input[@type='text' and @placeholder='Enter username']
+//div[@class='login-form']//button[contains(@class, 'submit-btn')]
+```
+
+## Finding questions & answers with code blocks
+
+```xpath
+// Questions
+//div[contains(@class, 'question')]
+
+// Answers for a specific question
+//div[contains(@class, 'question')]//div[contains(@class, 'answer')]
+
+// Code blocks within answers
+//div[contains(@class, 'answer')]//code
+//pre[contains(@class, 'code-block')]
+
+// Complete content extraction
+//div[contains(@class, 'question')] | //div[contains(@class, 'answer')]//code
+```
+
+Advanced content extraction:
+
+```xpath
+// Questions with titles
+//h2[contains(@class, 'question-title')]
+
+// Answers with votes
+//div[contains(@class, 'answer') and @data-score > 0]
+
+// Code blocks with specific languages
+//code[contains(@class, 'language-')]
+//pre/code[contains(text(), 'function')]
+
+// Nested content structure
+//div[@class='question']/following-sibling::div[@class='answers']//code
+```
+
+## Common XPath functions reference
+
+### String functions
+
+```xpath
+// string-length
+//button[string-length(text()) > 5]
+
+// normalize-space
+//div[normalize-space(text()) = 'Hello World']
+
+// concat
+//span[concat(@class, '-extra') = 'button-extra']
+
+// substring
+//div[substring(@id, 1, 4) = 'user']
+```
+
+### Number/position functions
+
+```xpath
+// position
+//tr[position() mod 2 = 0]    
+//li[position() < 5]          
+
+// count
+//div[count(./p) > 2]         
+```
+
+## Best practices and tips
+
+Do's:
+- Prefer relative XPath over absolute
+- Use specific attributes where available
+- Test XPath in the browser console before using
+- Combine multiple strategies for robustness
+- Write descriptive, maintainable expressions
+
+Don'ts:
+- Avoid positional indexes when possible
+- Don’t use overly complex expressions unnecessarily
+- Avoid XPath when a simple ID or Name works
+- Don’t rely on text that changes frequently
+
+### Performance tips
+
+```xpath
+// Faster — specific attribute
+//input[@id='email']
+
+// Slower — complex text matching
+//*[contains(text(), 'very long dynamic text content')]
+```
+
+<Warning>
+Avoid common pitfalls: absolute paths that break easily, over‑reliance on changing text, overly complex expressions, and not testing XPath across browsers.
+</Warning>
+
+
+## NexGen QE implementation
+
+Using XPath in test cases:
+
+```text
+# Example test case with XPath
+- NavigateTo "https://example.com/login"
+- InputText "xpath=//input[@name='username']" "testuser"
+- InputText "xpath=//input[contains(@id, 'password')]" "password123"
+- ClickElement "xpath=//button[text()='Sign In']"
+- VerifyElement "xpath=//div[contains(text(), 'Welcome')]"
+```
+
+<Grid cols={2}>
+	<Card title="Previous" icon="arrow-left" href="/web-testing/basics/text">
+		Back to Text Locator
+	</Card>
+	<Card title="Home" icon="home" href="/web-testing/basics">
+		Back to Web Testing Basics
+	</Card>
+  
+</Grid>
+
+<Tip>
+Pro tip: Use browser developer tools to test XPath before implementing. Right‑click an element → Inspect → in Console run `$x('your-xpath')` to preview matches.
+</Tip>
+

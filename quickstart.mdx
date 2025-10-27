@@ -1,6 +1,7 @@
 ---
 title: "Quickstart"
 description: "Understand the testing flow and write your first test case in NextGen QE"
+mode : "wide"
 ---
 
 ## Get Started with Test Case Creation
@@ -12,38 +13,40 @@ Follow these steps to understand the complete flow — from writing your first t
 ### Step 1: Understand the Testing Flow
 
 <AccordionGroup>
-  <Accordion icon="workflow" title="1. Go to the NexGen QE tab">
+  <Accordion  title="1. Go to the NexGen QE tab">
     Open the Piedap platform and navigate to the **NexGen QE** from your project dashboard.  
-    <img src="/imgs/quickstart/Nexgen.png" alt="Navigate to NexGen QE tab" />
+    <img src="/web-testing/imgs/Login.png" alt="Navigate to NexGen QE tab" />
+    navigate to the **NexGen QE** from your project dashboard.  
+    <img src="/web-testing/imgs/goToNex.png" alt="Navigate to NexGen QE tab" />
   </Accordion>
 
-  <Accordion icon="layout-dashboard" title="2. Go to the Design tab">
+  <Accordion  title="2. Go to the Design tab">
     Once inside QE, select the **Design** tab.  
     This is where all your features and functionalities are listed.  
-    <img src="/imgs/quickstart/Nexgen.png" alt="Open the Design tab" />
+    <img src="/web-testing/imgs/designTab.png" alt="Open the Design tab" />
   </Accordion>
 
-  <Accordion icon="list-checks" title="3. Choose your feature">
+  <Accordion  title="3. Choose your feature">
     Pick the **feature** you want to create a test case for.  
     Clicking on it will redirect you to the **Test Case section** under the Design tab.  
-    <img src="/imgs/quickstart/Nexgen.png" alt="Select a feature for test case" />
+    <img src="/web-testing/imgs/feature.png" alt="Select a feature for test case" />
   </Accordion>
 
-  <Accordion icon="file-pen" title="4. Write your first test case">
+  <Accordion  title="4. Write your first test case">
     Choose the **functionality** you want to test.  
     Click on **New** to create your first test case.  
 
     <Tip>Start with a simple web testing flow to understand the process clearly.</Tip>
-    <img src="/imgs/quickstart/Nexgen.png" alt="Write a new test case" />
+    <img src="/web-testing/imgs/Functionality.png" alt="Write a new test case" />
   </Accordion>
 
-  <Accordion icon="window" title="5. Create the Test Case (Web Testing)">
+  <Accordion title="5. Create the Test Case (Web Testing)">
     Begin with a **Web Testing** case.  
     Define the **test name**, **steps**, and **expected results**.  
     <img src="/imgs/quickstart/Nexgen.png" alt="Define web test case details" />
   </Accordion>
 
-  <Accordion icon="arrow-right-circle" title="6. Understand the Keywords">
+  <Accordion  title="6. Understand the Keywords">
     Each test step can use different **keywords** that represent actions.  
     For example:
     - `navigate` → Opens a URL in the browser  
@@ -62,69 +65,84 @@ Follow these steps to understand the complete flow — from writing your first t
 ---
 
 ### Step 2: Attach Test Data
-
 <AccordionGroup>
-  <Accordion icon="table" title="1. Create Test Data">
-    Go to the **Test Data** section under your selected test case.  
-    <img src="/imgs/quickstart/Nexgen.png" alt="Create test data table" />
+
+  <Accordion  title="7. Click on the Test Data Columns">
+    Click on the **Test Data Columns** section to attach the related test data.  
+    <img 
+      src="/web-testing/imgs/chooseTestData.png" 
+      alt="Test data table with column creation interface" 
+      width="600" 
+      style={{borderRadius: '8px', margin: '15px 0'}}
+    />
   </Accordion>
 
-  <Accordion icon="edit" title="2. Add values to the test data table">
-    Fill in your **input values**, **expected outputs**, or any **dynamic data** needed for your case.  
-    <img src="/imgs/quickstart/Nexgen.png" alt="Add data values to test case" />
+  <Accordion  title="8. Attach Test Data Table">
+  Attach the test data table that you’ve created for this test case.  
+  <img 
+    src="/web-testing/imgs/attachtestdata.png" 
+    alt="Test data entry form with sample values" 
+    width="600" 
+    style={{borderRadius: '8px', margin: '15px 0'}}
+  />
+
+  <Tip>
+    💡 If you’re unsure how to create test data, check out the 
+    <a href="/web-testing/test-data"> Test Data Management</a> documentation.
+  </Tip>
+</Accordion>
+
+
+  <Accordion title="9. Use Test Data in Test Steps">
+    In your test case steps, **link test data variables** instead of hardcoded values to achieve a fully **data-driven test** design.  
+    <img 
+      src="/web-testing/imgs/useTestData.png" 
+      alt="Test step editor showing data variable binding" 
+      width="600" 
+      style={{borderRadius: '8px', margin: '15px 0'}}
+    />
   </Accordion>
 
-  <Accordion icon="save" title="3. Save your test data">
-    Once done, click **Save**.  
-    Your test case is now ready to execute.  
-    <img src="/imgs/quickstart/Nexgen.png" alt="Save test data" />
+  <Accordion  title="10. Run the Test Case">
+    Click **Validate** to execute your test case.  
+    Monitor progress through logs and real-time execution status across browsers or environments.  
+    <img 
+      src="/web-testing/imgs/valiadate_test_case.png" 
+      alt="Test execution interface with run button and progress indicators" 
+      width="600" 
+      style={{borderRadius: '8px', margin: '15px 0'}}
+    />
   </Accordion>
+
+  <Accordion  title="11. Validate Results">
+    Review your execution reports in NexGen QE.  
+    If all validations pass — 🎉 **Congratulations!** You've successfully executed your automated test case.  
+    <img 
+      src="/web-testing/imgs/successfully.png" 
+      alt="Test results dashboard showing passed test cases" 
+      width="600" 
+      style={{borderRadius: '8px', margin: '15px 0'}}
+    />
+  </Accordion>
+
 </AccordionGroup>
 
 ---
 
-### Step 3: Run Your Test Case
+## 📊 Example Test Case Structure
 
-<Accordion icon="rocket" title="Run and Validate">
-  1. Go to the **Run Test Case** section.  
-  2. Choose your test case and click **Run**.  
-  3. Observe logs and results in real-time.  
-  4. Once the test passes, you'll see a success notification.
+```gherkin
+Feature: User Authentication
+Test Case: TC_test
 
-  <Tip>Congratulations! You've just executed your first automated web test case.</Tip>
-  <img src="/imgs/quickstart/Nexgen.png" alt="Running and validating test case" />
-</Accordion>
+Test Data:
+| URL                                            |        
+|------------------------------------------------|
+| https://platform.piedap.io                    |
 
----
+Test Steps:
+1. Navigate to login page
 
-## Next Steps
-
-Now that you've completed your first test case, explore these important topics:
-
-<CardGroup cols={2}>
-  <Card title="Learn More Keywords" icon="list" href="/web-testing/keywords">
-    Explore all available actions and functions for automated web testing.
-    
-  </Card>
-
-  <Card title="Manage Test Data" icon="database" href="/test-data/management">
-    Learn how to organize and reuse test data effectively.
-   
-  </Card>
-
-  <Card title="Run Suite Execution" icon="layers" href="/test-suite/execution">
-    Combine multiple cases into test suites for full-flow validation.
-   
-  </Card>
-
-<Card title="Analyze Reports" icon="bar-chart" href="/reporting/overview">
-  Understand your execution reports and identify improvements.
-  
-
-  
-  
-</Card>
-</CardGroup>
 
 ---
 
