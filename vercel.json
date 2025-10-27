@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://docs.abhimanyu.tech"
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://docs.abhimanyu.tech/:path*"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "piedap-docs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Piedap documentation powered by Mintlify",
+  "scripts": {
+    "dev": "npx mint@latest dev",
+    "build": "node -e \"console.log('No build step required on Vercel; site is proxied via rewrites')\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

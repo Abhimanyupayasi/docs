@@ -1,0 +1,10 @@
+# Node/Vercel
+node_modules/
+.vercel/
+
+# Build output
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
