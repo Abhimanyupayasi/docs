@@ -27,7 +27,11 @@
               "web-testing/page-objects",
               "web-testing/test-data",
               "web-testing/writing-tests",
+              "web-testing/piedap-recorder",
+              "web-testing/strategy-tab",
               "web-testing/testing-types",
+              
+              
              
               {
                 "group": "web testing basics",
