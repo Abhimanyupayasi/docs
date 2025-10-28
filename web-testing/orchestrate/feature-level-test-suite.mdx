@@ -1,0 +1,82 @@
+---
+title: "feature-level test suites"
+description: "Learn how to create and manage feature-level test suites in the Orchestrate tab of NextGen QE."
+mode: "wide"
+---
+
+# Creating and Managing Test Suites in Orchestrate
+
+The **Orchestrate** section allows you to create and manage **feature-level test suites**.  
+Test suites combine validated test cases under specific testing types and features, enabling structured and automated test execution.
+
+---
+
+## Prerequisites
+
+Before creating a test suite, ensure that:
+1. A **Testing Type** has been created in the [Strategy Tab](/web-testing/strategy-tab).  
+   If you haven’t configured this yet, please review that documentation first.
+
+---
+
+## Steps to Create a Test Suite
+
+### Step 1: Navigate to the Orchestrate Tab
+
+Go to the **Orchestrate** tab from the main navigation.
+
+
+
+---
+
+### Step 2: Select or Open a Feature
+
+Select the desired **Feature** or click on it to open the **Test Suite** section.
+
+<img src="/web-testing/imgs/test_suite_3.png" alt="Select or open a feature in Orchestrate tab" />
+
+---
+
+### Step 3: Create a New Test Suite
+
+Click the **Create Test Suite** button to open the setup form.
+
+---
+
+### Step 4: Fill in Test Suite Details
+
+You can either create a new test suite or link to an existing one.  
+Provide the required details as shown below:
+
+| Field | Description |
+|--------|-------------|
+| **Create Mode** | Choose between **Create New** or **Link Existing Test Suites** |
+| **Testing Type** | Select a pre-defined type (e.g., Functional Testing) |
+| **Test Suite Name** | Enter a meaningful name (e.g., `TS_PF01_test_suite`) |
+| **Feature** | Select the relevant feature |
+| **Run Sequence** | Define the order (e.g., `RS_01`) |
+| **Run Mode** | Choose from available modes (e.g., FT-UI Based Functional) |
+| **Test Case Type** | Select the applicable test case type (e.g., Web-Web) |
+| **Platform** | Specify the target platform |
+| **Description** | Add a short description for the test suite |
+
+<img src="/web-testing/imgs/test_suite_1.png" alt="Create Test Suite form in Orchestrate tab" />
+
+---
+
+### Step 5: Add Test Cases to the Test Suite
+
+After creating the test suite, select it from the list and **add test cases**.  
+Only **validated test cases** can be added to a test suite.
+
+<img src="/web-testing/imgs/test_suite2.png" alt="Add validated test cases to test suite" />
+
+---
+
+## Completion
+
+Congratulations — your **Test Suite** has been successfully created!  
+You can now execute it within the **Execute** tab.
+
+👉 To learn how to run your test suites, visit:  
+[Executing Test Suites →](/web-testing/execute/executing-test-suites)

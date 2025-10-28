@@ -1,0 +1,46 @@
+---
+title: "Analyze"
+description: "Understand how to enable and use Auto Defect Capture in NextGen QE during test suite execution."
+mode: "wide"
+---
+
+# Auto Defect Capture in NextGen QE
+
+The **Analyze** tab in **NextGen QE** is responsible for automatically capturing **defects** that occur during test suite execution.  
+This feature helps in identifying and logging issues without manual intervention, improving testing efficiency and traceability.
+
+---
+
+## How Auto Defect Works
+
+When you execute any **Test Suite**, NextGen QE can automatically detect and log failed test cases as **defects**.  
+These defects are then available for review and tracking under the **Analyze** section.
+
+---
+
+## Enabling Auto Defect
+
+You can enable Auto Defect in two ways:
+
+1. **From the User Run Configuration**  
+   Learn about setting up configurations under  
+   👉 [/web-testing/user-run-config#⚙️-web-run-config-in-nextgen-qe](/web-testing/user-run-config#⚙️-web-run-config-in-nextgen-qe)
+
+2. **From the Orchestrate Tab (Run Config Section)**  
+   Navigate to:  
+   👉 [/web-testing/orchestrate/run-config](/web-testing/orchestrate/run-config)
+
+---
+
+## Steps to Enable Auto Defect
+
+1. Go to **NextGen QE → Orchestrate → Run Config**  
+2. Select your **Test Suite Run Configuration**  
+3. Mark **Yes** for the option **“Auto Defects”**  
+4. Save your configuration  
+
+![Enable Auto Defect in Run Config](/web-testing/imgs/autodefects.png)
+
+---
+
+> 💡 **Tip:** Once Auto Defect is enabled, any test case failure during execution will automatically generate a defect entry under the **Analyze** tab for quick debugging and tracking.

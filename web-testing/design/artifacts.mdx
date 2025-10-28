@@ -1,0 +1,98 @@
+---
+title: "Artifacts Management"
+description: "Manage files, images, and media in NextGen QE for use across test steps, test suites, and test processes."
+mode: "wide"
+---
+
+# <i class="fa-solid fa-box-archive" style={{color:'#3b82f6'}}></i> Artifacts Management
+
+This is the section where we manage all **files, images, and media** that will be used in  
+**test steps**, **test suites**, and **test processes** inside **NextGen QE**.
+
+---
+
+## <i class="fa-solid fa-circle-info" style={{color:'#0ea5e9'}}></i> What is an Artifact?
+
+Artifacts act as a central storage area for reusable files and assets.  
+You can store items such as:
+
+- 📁 Images  
+- 📊 Excel Sheets  
+- 📄 PDFs  
+- 🎥 Media or reference files  
+
+These artifacts can be referenced inside test data or directly in test steps.
+
+> Example: Upload a sample Excel sheet used for login credentials, or an image used for validation.
+
+---
+
+## <i class="fa-solid fa-diagram-project" style={{color:'#06b6d4'}}></i> How to Access and Create Artifacts
+
+Follow these steps to create and use artifacts inside **NextGen QE**.
+
+---
+
+### Step 1: Login to PiedaP
+Login to your [PiedaP](https://piedap.com) account.  
+<img src="/images/artifacts-step1.png" alt="Login to PiedaP" />
+
+---
+
+### Step 2: Navigate to NextGen QE
+Once logged in, navigate to the **NextGen QE** tab from the sidebar.  
+<img src="/images/artifacts-step2.png" alt="Navigate to NextGen QE" />
+
+---
+
+### Step 3: Go to the Artifacts Section
+Open the **Artifacts** tab from the NextGen QE workspace.  
+<img src="/images/artifacts-step3.png" alt="Open the Artifacts section" />
+
+---
+
+### Step 4: Create a New Artifact
+Click **Create New Artifact**, then:
+- Enter the **artifact name**
+- **Upload** the file (image, Excel, or media)
+
+<img src="/images/artifacts-step4.png" alt="Create and upload a new artifact" />
+
+---
+
+### Step 5: Copy File Path
+After creating the artifact, you’ll see a **file path**.  
+Copy this — you’ll use it later in your test data or test steps.  
+<img src="/images/artifacts-step5.png" alt="Copy the artifact file path" />
+
+---
+
+### Step 6: Use File Path in Test Data
+Go to the **Test Data** section and paste the artifact path as a value.  
+This links your uploaded file to your test data set.  
+<img src="/images/artifacts-step6.png" alt="Add artifact path to test data" />
+
+---
+
+### Step 7: Use Artifacts in Test Steps
+Once the artifact is linked through test data, you can use it in your test steps with keywords such as:
+
+- `upload file`
+- `open uploaded excel`
+- `use uploaded media`
+
+<img src="/images/artifacts-step7.png" alt="Use artifacts in test steps" />
+
+---
+
+✅ **Done!**
+You’ve successfully created and linked an artifact in **NextGen QE**.  
+You can now reuse the same artifact across different test cases and suites.
+
+> 💡 **Tip:** Keep file names meaningful, like `UserLoginData.xlsx` or `BannerImage.png`, for easy reference.
+
+---
+
+### 🔗 Related Topics
+- [Test Data Management](/web-testing/testdata)  
+- [Reusable Test Steps (RTS)](/web-testing/design/rts)

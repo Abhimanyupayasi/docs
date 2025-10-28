@@ -31,8 +31,49 @@
               "web-testing/strategy-tab",
               "web-testing/testing-types",
               
-              
-             
+              {
+                "group": "Design",
+                "pages": [
+                  "web-testing/design",
+                  "web-testing/design/rts",
+                  "web-testing/design/artifacts",
+                  "web-testing/design/custom-scripts"
+                ]
+              },
+              "web-testing/user-run-config",
+              {
+                "group": "Orchestrate",
+                "pages": [
+                  "/web-testing/orchestrate",
+                  "web-testing/orchestrate/feature-level-test-suite",
+                  "web-testing/orchestrate/test-suite-creation",
+                   "web-testing/orchestrate/test-data",
+                  "web-testing/orchestrate/use-case",
+                  "web-testing/orchestrate/process-creation",
+                  "web-testing/orchestrate/run-config"
+
+                ]
+              },
+              {
+                "group": "Execute",
+                "pages": [
+                  "/web-testing/execute",
+                  "web-testing/execute/executing-test-suites",
+                  "web-testing/execute/execute-process",
+                   "web-testing/execute/use-case",
+                  "web-testing/execute/scheduler"
+                  
+
+                ]
+              },
+              {
+                "group": "Report",
+                "pages": [
+                  "/web-testing/report",
+                  "web-testing/report/test-suite"
+                ]
+              },
+              "web-testing/analyze",
               {
                 "group": "web testing basics",
                 "pages": [

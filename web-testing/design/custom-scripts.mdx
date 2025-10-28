@@ -1,0 +1,113 @@
+---
+title: "Custom Scripts"
+description: "Use custom Python scripts to extend NexGen QE test automation capabilities with advanced logic, APIs, and reusable automation patterns."
+slug: /web-testing/design/custom-scripts
+mode: "wide"
+sidebar_position: 7
+keywords:
+  - NexGen QE
+  - Custom Scripts
+  - Selenium Python
+  - Automation Framework
+  - Low-Code Testing
+  - QA Automation
+  - Piedap Platform
+---
+
+# Custom Scripts
+
+**Custom Scripts** allow testers and automation engineers to add advanced logic and custom workflows to NexGen QE test executions.  
+When a predefined keyword or action isn't enough, you can use **custom Python scripts** to enhance flexibility and handle unique testing scenarios.
+
+Use this feature whenever you want to:
+- Integrate with external systems (like email, APIs)  
+- Execute conditional or dynamic logic  
+- Perform complex validations beyond standard steps  
+
+---
+
+## 🧩 Example: Custom Script for OTP Verification
+
+Below is an example of a **custom Selenium Python script** used to verify a One-Time Password (OTP) sent to an Outlook inbox during login flow testing.
+
+```python
+# type: ignore
+def start_custom_script(driver, By, screenshotPath):
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.common.exceptions import TimeoutException, NoSuchElementException
+    import time
+    import re
+
+    wait = WebDriverWait(driver, 30)
+
+    try:
+        # STEP 1: Switch to first tab and get OTP prefix
+        driver.switch_to.window(driver.window_handles[0])
+        otp_prefix_element = wait.until(
+            EC.presence_of_element_located((By.XPATH, "(//button[@aria-label='Go Back']//following-sibling::div//input)[1]"))
+        )
+        otp_prefix = otp_prefix_element.get_attribute("value").strip()
+        print(f"[INFO] OTP Prefix captured: {otp_prefix}")
+
+        # STEP 2: Switch to Outlook tab
+        driver.switch_to.window(driver.window_handles[1])
+        print("[INFO] Switched to Outlook tab. Monitoring email...")
+
+        mail_xpath = '(//*[contains(text(),"Login Code One Time Pin for PiEDAP Platform")])[1]'
+        timeout = time.time() + 120  # 2-minute timeout
+
+        while time.time() < timeout:
+            try:
+                mail_element = WebDriverWait(driver, 5).until(
+                    EC.presence_of_element_located((By.XPATH, mail_xpath))
+                )
+            except (TimeoutException, NoSuchElementException):
+                driver.save_screenshot(screenshotPath + "/getScreenshotAfter4.png")
+                print("[INFO] Waiting for email...")
+                continue
+
+            try:
+                mail_element.click()
+                print("[INFO] Email clicked.")
+            except Exception as e:
+                driver.save_screenshot(screenshotPath + "/getScreenshotAfter2.png")
+                print(f"[WARN] Failed to click email: {e}")
+                continue
+
+            # STEP 3: Check if OTP prefix is in email body
+            try:
+                body_element = wait.until(
+                    EC.element_to_be_clickable(
+                        (By.XPATH, '(//*[contains(normalize-space(text()),"One Time Pin for PiEDAP Platform is") and .//strong])')
+                    )
+                )
+                body_text = body_element.text.strip()
+                print(f"[INFO] Email body content found: {body_text[:50]}...")
+
+                if otp_prefix in body_text:
+                    driver.save_screenshot(screenshotPath + "/ifBlock.png")
+                    print("✅ OTP prefix found in email body. Test Passed.")
+                    return
+                else:
+                    driver.save_screenshot(screenshotPath + "/Else.png")
+                    print("❌ OTP prefix not found in email body. Retrying...")
+                    continue
+            except TimeoutException:
+                driver.save_screenshot(screenshotPath + "/getScreenshotAfter3.png")
+                print("[ERROR] Email body not found. Retrying...")
+                continue
+            time.sleep(3)
+
+        print("[TIMEOUT] OTP prefix not found in email body.")
+    except Exception as e:
+        driver.save_screenshot(screenshotPath + "/getScreenshotAfter1.png")
+        print(f"[ERROR] An error occurred: {e}")
+```
+---
+## 🛠️ How to Use Custom Scripts
+<div className="info-div">
+  💡 After creating a custom script, you can use it just like a keyword — simply add the <b>Custom Script Name</b> in your test case, and NexGen QE will automatically run it during execution.
+</div>
+
+---

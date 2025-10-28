@@ -1,0 +1,113 @@
+---
+title: "Reusable Test Steps (RTS)"
+description: "Learn how to create and use Reusable Test Steps (RTS) in NextGen QE for efficient web automation."
+mode: "wide"
+---
+
+import Img from '@components/Img'
+
+# Reusable Test Steps (RTS)
+
+Reusable Test Steps (RTS) are a powerful feature in **NextGen QE** that allows you to reuse common sequences of actions across multiple test cases — saving time and ensuring consistency.
+
+---
+
+## 🧩 What is RTS?
+
+**RTS (Reusable Test Steps)** are predefined sets of actions or steps that can be reused across multiple test cases.  
+Instead of rewriting similar steps for each test case, RTS lets you create them once and use them wherever needed.
+
+> **Example:** A login flow, form submission, or validation that repeats across modules can be made into an RTS.
+
+---
+
+## ⚙️ How NextGen QE Works with RTS
+
+In **NextGen QE**, RTS integrates directly with your test management workflow:
+
+- **Create, edit, and link** RTS within your project
+- **Attach to any test case** with shared or merged test data
+- **Ensure modular test design** for consistency and reduced redundancy
+
+---
+
+## 🏗️ How to Create RTS
+
+There are **two methods** to create RTS in **NextGen QE**:
+
+---
+
+### **Method 1: Create via RTS Tab**
+
+#### Step 1: Access NextGen QE
+1. **Login** to your [PiedaP](https://piedap.com) account
+2. Navigate to the **NextGen QE** tab
+   <img src="/imgs/quickstart/Nexgen.png" alt="NextGen QE dashboard interface" width="700" />
+
+#### Step 2: Navigate to Design Section
+3. Go to the **Design** tab
+   <img src="/web-testing/imgs/designTab.png" alt="Design tab with various testing options" width="700" />
+
+#### Step 3: Access RTS Management
+4. Click on the **RTS** tab
+   <img src="/web-testing/imgs/rtsTab.png" alt="RTS management interface" width="700" />
+
+#### Step 4: Create New RTS
+5. Click **Create RTS** and configure:
+   - **Type:** `FT-UI Based Functional`
+   - **Module:** `Web-Web`
+   <img src="/web-testing/imgs/rts_2.png" alt="RTS creation form with type and module selection" width="700" />
+
+#### Step 5: Configure Test Data
+6. **Assign Test Data** to the RTS
+   <img src="/web-testing/imgs/rts_3.png" alt="Test data assignment interface" width="700" />
+
+#### Step 6: Build RTS Steps
+7. Click on your **created RTS** to open the editor
+   <img src="/web-testing/imgs/rts_4.png" alt="RTS list with created items" width="700" />
+
+8. Add **keywords and steps** for reuse
+   <img src="/web-testing/imgs/rts_5.png" alt="RTS step builder with keyword options" width="700" />
+
+#### Step 7: Implement RTS in Test Cases
+9. Navigate to the **test case** where you want to use this RTS
+   <img src="/web-testing/imgs/rts_8.png" alt="Test case management interface" width="700" />
+
+10. **Attach the same test data** or **merge RTS test data** with test case data
+    <img src="/web-testing/imgs/rts_7.png" alt="Test data attachment options" width="700" />
+
+11. **Use RTS** in your test steps
+    <img src="/web-testing/imgs/rts_6.png" alt="RTS implementation in test steps" width="700" />
+
+---
+
+### **Method 2: Create Directly from Test Case**
+
+#### Step 1: Select Test Steps
+1. Go to the **Test Case** where you want to create RTS
+2. Select the **test steps** you want to reuse
+3. Click on the **Create RTS** icon
+   <img src="/web-testing/imgs/rts_9.png" alt="Create RTS from selected test steps" width="700" />
+
+#### Step 2: Save RTS
+4. Click **Save** — your RTS is created and stored for reuse
+   <img src="/web-testing/imgs/rts_10.png" alt="RTS save confirmation" width="700" />
+
+---
+
+## 🎉 Congratulations!
+
+You've successfully created a **Reusable Test Step (RTS)** in **NextGen QE**.  
+You can now attach or reuse it across different test cases for faster and cleaner automation.
+
+### **Benefits You'll Experience:**
+- ✅ **Time Savings** - No more rewriting common test sequences
+- ✅ **Consistency** - Ensure uniform test execution across projects
+- ✅ **Maintainability** - Update once, apply everywhere
+- ✅ **Efficiency** - Streamline your test automation workflow
+
+---
+
+> 💡 **Pro Tip:** If you're unsure how to create or attach test data, check out our comprehensive guide on  
+> [Test Data Management →](/web-testing/testdata)
+

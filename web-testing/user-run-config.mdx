@@ -1,0 +1,85 @@
+---
+title: "QE User Config"
+description: "Understand Web Run Config and User Variable management in NextGen QE for effective test configuration and execution."
+mode: "wide"
+---
+
+import { Settings, Globe, Database } from "lucide-react"
+import Img from '@components/Img'
+
+# ⚙️ QE User Config in NextGen QE
+
+The **QE User Config** section in **NextGen QE** allows you to define essential configurations that control how your tests are executed and managed.  
+It includes two key parts:
+1. **Web Run Config** – defines how tests run across browsers and environments.  
+2. **User Variables** – defines reusable data and dynamic values for your tests.
+
+---
+
+## 🌐 1. Web Run Config
+
+# ⚙️ Web Run Config in NextGen QE
+
+You can create **Web Runtime Configurations** to define how your web tests should be executed.  
+This includes settings such as:
+- Browser type and version  
+- Operating system and resolution  
+- Execution mode (Headful / Headless)  
+- Environment (Local / Remote)  
+- Reporting and logging preferences  
+
+<img src="/web-testing/imgs/web-run-config.png" alt="Web Run Config screen in NextGen QE" />
+
+---
+
+### 🧩 Configuration Fields
+
+| Field | Description |
+|--------|-------------|
+| **OS Name *** | Operating System (e.g., Linux, Windows) |
+| **OS Version *** | Version of the operating system (e.g., 22.05) |
+| **Browser Name *** | Browser to use (e.g., Chrome, Edge) |
+| **Browser Version *** | Browser version (e.g., 116) |
+| **Screen Resolution** | Resolution for test execution screen |
+| **Execution Mode** | Choose between *Headful* or *Headless* |
+| **Execution Method** | Run tests in *Series* or *Parallel* |
+| **Execution Environment** | Define as *Remote* or *Local* |
+| **Report Screenshot** | Choose *Yes* or *No* for screenshot capture |
+| **Auto Defect Log** | Automatically log defects (*Yes* / *No*) |
+
+> 💡 **Tip:** Use headless mode for faster executions in CI pipelines.
+
+---
+
+## 🧮 2. User Variable Management
+
+# 🧩 User Variable Management in NextGen QE
+
+**User Variables** in **NextGen QE** allow you to define **global or user-specific variables** that can be reused across multiple test cases.  
+This ensures consistency, flexibility, and ease of maintenance in your test data.
+
+<img src="/web-testing/imgs/user-variable.png" alt="User Variable management screen in NextGen QE" />
+
+---
+
+### 📘 What User Variables Can Store
+- Session details (like **user cookies**)  
+- Environment URLs  
+- Authentication tokens  
+- Any dynamic or reusable field values needed in test data  
+
+These variables can be dynamically **referenced in Test Data** or **passed during test execution**.  
+
+> 🔁 Example: Store multiple web cookies in a variable and reuse them across different test steps or modules without redefining them.
+
+---
+
+## 🔄 Why QE User Config Matters
+
+By defining **Web Run Config** and **User Variables**, you ensure that your test execution:
+- Is consistent across environments  
+- Uses standardized data  
+- Is easily maintainable for all team members  
+
+---
+
