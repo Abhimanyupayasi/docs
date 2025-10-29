@@ -23,6 +23,7 @@
           {
             "group": "Web Testing",
             "pages": [
+              "web-testing/introduction",
               "web-testing/keywords",
               "web-testing/page-objects",
               "web-testing/test-data",
@@ -75,6 +76,13 @@
               },
               "web-testing/analyze",
               {
+                "group": "Visual Testing",
+                "pages": [
+                  "web-testing/visual-testing/introduction",
+                  "web-testing/visual-testing/create-base-line"
+                ]
+              },
+              {
                 "group": "web testing basics",
                 "pages": [
                   "web-testing/basics",
@@ -87,6 +95,14 @@
                 ]
               }
              
+            ]
+          },
+          {
+            "group": "Docs",
+            "pages": [
+              "docs/cross-browser-testing",
+              "docs/mobile-testing",
+              "/docs/api-testing"
             ]
           },
           {
