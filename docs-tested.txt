@@ -1,0 +1,203 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Piedap Documentation",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/logo/FavIconDocs.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "NexGen QE",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Web Testing",
+            "pages": [
+              "web-testing/introduction",
+              "web-testing/keywords",
+              "web-testing/page-objects",
+              "web-testing/test-data",
+              "web-testing/writing-tests",
+              "web-testing/piedap-recorder",
+              "web-testing/strategy-tab",
+              "web-testing/testing-types",
+              
+              {
+                "group": "Design",
+                "pages": [
+                  "web-testing/design",
+                  "web-testing/design/rts",
+                  "web-testing/design/artifacts",
+                  "web-testing/design/custom-scripts"
+                ]
+              },
+              "web-testing/user-run-config",
+              {
+                "group": "Orchestrate",
+                "pages": [
+                  "/web-testing/orchestrate",
+                  "web-testing/orchestrate/feature-level-test-suite",
+                  "web-testing/orchestrate/test-suite-creation",
+                   "web-testing/orchestrate/test-data",
+                  "web-testing/orchestrate/use-case",
+                  "web-testing/orchestrate/process-creation",
+                  "web-testing/orchestrate/run-config"
+
+                ]
+              },
+              {
+                "group": "Execute",
+                "pages": [
+                  "/web-testing/execute",
+                  "web-testing/execute/executing-test-suites",
+                  "web-testing/execute/execute-process",
+                   "web-testing/execute/use-case",
+                  "web-testing/execute/scheduler"
+                  
+
+                ]
+              },
+              {
+                "group": "Report",
+                "pages": [
+                  "/web-testing/report",
+                  "web-testing/report/test-suite"
+                ]
+              },
+              "web-testing/analyze",
+              {
+                "group": "Visual Testing",
+                "pages": [
+                  "web-testing/visual-testing/introduction",
+                  "web-testing/visual-testing/create-base-line"
+                ]
+              },
+              {
+                "group": "web testing basics",
+                "pages": [
+                  "web-testing/basics",
+                  "web-testing/basics/xpath",
+                  "web-testing/basics/text",
+                  "web-testing/basics/id",
+                  "web-testing/basics/name",
+                  "web-testing/basics/classname",
+                  "web-testing/basics/tag",
+                  "web-testing/basics/methods-in-api"
+                ]
+              }
+             
+            ]
+          },
+          {
+            "group": "Dashboard",
+            "pages": [
+              "dashboard"
+            ]
+          },
+          {
+            "group": "Docs",
+            "pages": [
+              "docs/cross-browser-testing",
+              "docs/mobile-testing",
+              "/docs/api-testing"
+            ]
+          },
+          {
+            "group": "API Testing",
+            "pages": [
+              "APIXecute/introduction",
+              "APIXecute/overview"
+            ]
+          },
+          {
+            "group": "Mobile Testing",
+            "pages": [
+              "mobile-testing/keywords"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Project 360",
+        "groups": [
+          {
+            "group": "Project 360",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Project 360",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      }
+   
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "href": "https://docs.abhimanyu.tech/",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://www.piedap.io/blogs",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/piedapLogo.png",
+    "dark": "/logo/PiedapForDark.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://platform.piedap.io/"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}
